@@ -1,0 +1,15 @@
+
+/* Class = "UINavigationItem"; title = "Root View Controller"; ObjectID = "0Ls-fs-msC"; */
+"0Ls-fs-msC.title" = "Root View Controller";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "40B-FW-BOp"; */
+"40B-FW-BOp.title" = "Item";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "56Z-bV-A8Z"; */
+"56Z-bV-A8Z.title" = "Item";
+
+/* Class = "UIBarButtonItem"; title = "Confirm"; ObjectID = "5EV-pZ-eA7"; */
+"5EV-pZ-eA7.title" = "Confirm";
+
+/* Class = "UINavigationItem"; title = "Books"; ObjectID = "OEy-Dn-Dhk"; */
+"OEy-Dn-Dhk.title" = "Books";

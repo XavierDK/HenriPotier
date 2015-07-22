@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  HenriPotier
+
+  Created by Xavier De Koninck on 16/07/2015.
+  Copyright (c) 2015 XavierDeKoninck. All rights reserved.
+*/
+
+"Books are loading..." = "Books are loading...";
+"Error" = "Error";
+"An error appeared." = "An error appeared.";
+"OK" = "OK";

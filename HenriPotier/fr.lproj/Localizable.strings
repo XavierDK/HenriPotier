@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  HenriPotier
+
+  Created by Xavier De Koninck on 16/07/2015.
+  Copyright (c) 2015 XavierDeKoninck. All rights reserved.
+*/
+
+"Books are loading..." = "Livres en cours de chargement...";
