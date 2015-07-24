@@ -18,10 +18,10 @@
     self.layer.borderWidth = 1.0f;
     [self.layer setCornerRadius:5.0f];
     
-    self.titleLabel.font = [UIFont openSansFontOfSize:13.f];
+    self.titleLabel.font = [UIFont openSansFontOfSize:11.f];
     self.titleLabel.textColor = [UIColor colorWithRed:51.f/255.f green:51.f/255.f blue:51.f/255.f alpha:1.f];
     
-    self.priceLabel.font = [UIFont openSansFontOfSize:11.f];
+    self.priceLabel.font = [UIFont openSansFontOfSize:10.f];
     self.priceLabel.textColor = [UIColor colorWithRed:51.f/255.f green:51.f/255.f blue:51.f/255.f alpha:1.f];
 }
 

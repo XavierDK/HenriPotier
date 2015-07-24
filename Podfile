@@ -6,6 +6,7 @@ target 'HenriPotier' do
 pod 'AFNetworking'
 pod 'SVProgressHUD'
 pod 'OpenSans'
+pod "MagicalRecord"
 
 end
 

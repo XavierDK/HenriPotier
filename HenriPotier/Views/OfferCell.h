@@ -8,10 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  The table cell to show a specific offer
+ */
 @interface OfferCell : UITableViewCell
 
+/**
+ *  The type of the offer
+ */
 @property (nonatomic, weak) IBOutlet UILabel *offerType;
+
+/**
+ *  The value of the offer
+ */
 @property (nonatomic, weak) IBOutlet UILabel *offerValue;
+
+/**
+ *  The result price after the offer
+ */
 @property (nonatomic, weak) IBOutlet UILabel *offerResult;
 
 @end

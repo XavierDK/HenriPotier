@@ -1,15 +1,69 @@
 
-/* Class = "UINavigationItem"; title = "Root View Controller"; ObjectID = "0Ls-fs-msC"; */
-"0Ls-fs-msC.title" = "Root View Controller";
+/* Class = "UINavigationItem"; title = "History"; ObjectID = "0Ls-fs-msC"; */
+"0Ls-fs-msC.title" = "Historique";
 
-/* Class = "UITabBarItem"; title = "Item"; ObjectID = "40B-FW-BOp"; */
-"40B-FW-BOp.title" = "Item";
+/* Class = "UILabel"; text = "Label"; ObjectID = "2QJ-o9-urt"; */
+"2QJ-o9-urt.text" = "Label";
 
-/* Class = "UITabBarItem"; title = "Item"; ObjectID = "56Z-bV-A8Z"; */
-"56Z-bV-A8Z.title" = "Item";
+/* Class = "UITabBarItem"; title = "Books"; ObjectID = "40B-FW-BOp"; */
+"40B-FW-BOp.title" = "Livres";
+
+/* Class = "UITabBarItem"; title = "History"; ObjectID = "56Z-bV-A8Z"; */
+"56Z-bV-A8Z.title" = "Historique";
 
 /* Class = "UIBarButtonItem"; title = "Confirm"; ObjectID = "5EV-pZ-eA7"; */
-"5EV-pZ-eA7.title" = "Confirm";
+"5EV-pZ-eA7.title" = "Confirmer";
+
+/* Class = "UILabel"; text = "30,00 € "; ObjectID = "BtG-8G-ImH"; */
+"BtG-8G-ImH.text" = "30,00 € ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "DNd-4z-buP"; */
+"DNd-4z-buP.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Basket"; ObjectID = "F5L-fq-M1k"; */
+"F5L-fq-M1k.title" = "Panier";
+
+/* Class = "UILabel"; text = "Result :"; ObjectID = "IC3-zN-lJu"; */
+"IC3-zN-lJu.text" = "Resultat :";
+
+/* Class = "UILabel"; text = "TOTAL"; ObjectID = "M5h-xn-Ung"; */
+"M5h-xn-Ung.text" = "TOTAL";
 
 /* Class = "UINavigationItem"; title = "Books"; ObjectID = "OEy-Dn-Dhk"; */
-"OEy-Dn-Dhk.title" = "Books";
+"OEy-Dn-Dhk.title" = "Livres";
+
+/* Class = "UILabel"; text = "TOTAL"; ObjectID = "Ulq-0o-viK"; */
+"Ulq-0o-viK.text" = "TOTAL";
+
+/* Class = "UILabel"; text = "Type : "; ObjectID = "VdI-DX-hqb"; */
+"VdI-DX-hqb.text" = "Type : ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "WSg-rB-zOF"; */
+"WSg-rB-zOF.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ZFX-A3-zKZ"; */
+"ZFX-A3-zKZ.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Offers"; ObjectID = "hiE-wk-cTT"; */
+"hiE-wk-cTT.title" = "Offres";
+
+/* Class = "UILabel"; text = "30,00 € "; ObjectID = "lWN-hj-VDd"; */
+"lWN-hj-VDd.text" = "30,00 € ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "o8w-LV-41w"; */
+"o8w-LV-41w.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "pqV-SO-EPz"; */
+"pqV-SO-EPz.text" = "Label";
+
+/* Class = "UILabel"; text = "30,00 € "; ObjectID = "qDv-LA-Npw"; */
+"qDv-LA-Npw.text" = "30,00 € ";
+
+/* Class = "UIButton"; normalTitle = "Buy"; ObjectID = "r7f-at-hYB"; */
+"r7f-at-hYB.normalTitle" = "Acheter";
+
+/* Class = "UILabel"; text = "Value : "; ObjectID = "sxQ-9c-dAB"; */
+"sxQ-9c-dAB.text" = "Valeur : ";
+
+/* Class = "UILabel"; text = "30,00 € "; ObjectID = "x8O-a2-9A3"; */
+"x8O-a2-9A3.text" = "30,00 € ";

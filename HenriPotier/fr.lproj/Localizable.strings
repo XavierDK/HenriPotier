@@ -6,4 +6,22 @@
   Copyright (c) 2015 XavierDeKoninck. All rights reserved.
 */
 
-"Books are loading..." = "Livres en cours de chargement...";
+"Books are loading..." = "Livres en chargement...";
+"Error" = "Erreur";
+"An error appeared." = "Une erreur est survenue.";
+"OK" = "OK";
+"Offers are loading..." = "Offres en chargement...";
+"Basket" = "Basket";
+"Your basket has been saved!" = "Votre panier a été sauvegardé!";
+"TOTAL" = "TOTAL";
+"TOTAL AFTER OFFER" = "TOTAL APRES OFFRE";
+"Empty" = "Vide";
+"You should select at least one book" = "Vous devez sélectionner au moins un livre";
+"Click on the books that you want to buy and press the button confirm. You will discover our best offer!" = "Cliquez sur les livres que vous voulez acheter et pressez le bouton confirmer. Vous allez découvrir notre meilleurs offre!";
+"minus" = "réduction";
+"percentage" = "pourcentage";
+"slice" = "tranche";
+"Value: %@%%" = "Valeur: %@%%";
+"Value: %@€" = "Valeur: %@€";
+"SliceValue: %@€, Value: %@€" = "Part: %@€, Valeur: %@€";
+"Result price : %.2f€" = "Result price : %.2f€";

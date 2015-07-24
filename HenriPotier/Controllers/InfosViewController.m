@@ -28,10 +28,11 @@
     [super didReceiveMemoryWarning];
 }
 
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-
+    
     return 1;
 }
 
@@ -44,11 +45,23 @@
 {
     OfferCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OfferCell"];
     
-    cell.offerType.text = [NSString stringWithFormat:@"Type : %@", [self.offers[@"offers"][indexPath.row][@"type"] uppercaseString]];
+    cell.offerType.text = [NSString stringWithFormat:@"Type : %@", [NSLocalizedString(self.offers[@"offers"][indexPath.row][@"type"], nil) uppercaseString]];
     
-    cell.offerValue.text = [NSString stringWithFormat:@"Value : %@€", self.offers[@"offers"][indexPath.row][@"value"]];
     
-    cell.offerResult.text = [NSString stringWithFormat:@"Result price : %@€", self.prices[indexPath.row]];
+    if ([self.offers[@"offers"][indexPath.row][@"type"] isEqualToString:@"percentage"])
+    {
+        cell.offerValue.text = [NSString stringWithFormat:NSLocalizedString(@"Value: %@%%", nil), self.offers[@"offers"][indexPath.row][@"value"]];
+    }
+    else if ([self.offers[@"offers"][indexPath.row][@"type"] isEqualToString:@"minus"])
+    {
+        cell.offerValue.text = [NSString stringWithFormat:NSLocalizedString(@"Value: %@€", nil), self.offers[@"offers"][indexPath.row][@"value"]];
+    }
+    else if ([self.offers[@"offers"][indexPath.row][@"type"] isEqualToString:@"slice"])
+    {
+        cell.offerValue.text = [NSString stringWithFormat:NSLocalizedString(@"SliceValue: %@€, Value: %@€", nil), self.offers[@"offers"][indexPath.row][@"sliceValue"], self.offers[@"offers"][indexPath.row][@"value"]];
+    }
+    
+    cell.offerResult.text = [NSString stringWithFormat:NSLocalizedString(@"Result price : %.2f€", nil), [self.prices[indexPath.row] floatValue]];
     
     return cell;
 }

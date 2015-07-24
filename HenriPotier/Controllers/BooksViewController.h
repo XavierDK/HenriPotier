@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  ViewController for the selection of the books
+ */
 @interface BooksViewController : UICollectionViewController
+
+/**
+ *  All the books to show
+ */
+@property (nonatomic, strong) NSArray *books;
+
+/**
+ *  All the books selected
+ */
+@property (nonatomic, strong) NSMutableSet *booksSelected;
 
 @end

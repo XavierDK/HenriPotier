@@ -8,7 +8,6 @@
 
 #import "BooksHTTPClient.h"
 
-
 static NSString * const BooksURLString = @"http://henri-potier.xebia.fr/books";
 typedef CGFloat (^OfferType)(NSDictionary*, CGFloat);
 
@@ -45,8 +44,6 @@ typedef CGFloat (^OfferType)(NSDictionary*, CGFloat);
             
             if ([responseObject isKindOfClass:[NSArray class]])
                 [self.delegate booksHTTPClient:self didUpdateWithBooks:responseObject];
-            else
-                NSLog(@"Books should be an array.");
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if ([self.delegate respondsToSelector:@selector(booksHTTPClient:didFailWithError:)]) {
@@ -58,7 +55,7 @@ typedef CGFloat (^OfferType)(NSDictionary*, CGFloat);
 - (void)updateOffersForIsbns:(NSArray*)isbns
 {
     NSString *isbnsStr = [NSString string];
-
+    
     BOOL firstTurn = TRUE;
     for (NSString *isbn in isbns)
     {
@@ -74,8 +71,7 @@ typedef CGFloat (^OfferType)(NSDictionary*, CGFloat);
             
             if ([responseObject isKindOfClass:[NSDictionary class]])
                 [self.delegate booksHTTPClient:self didUpdateWithOffers:responseObject];
-            else
-                NSLog(@"Offers should be a dictionary.");
+
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if ([self.delegate respondsToSelector:@selector(booksHTTPClient:didFailWithError:)]) {
@@ -96,8 +92,6 @@ typedef CGFloat (^OfferType)(NSDictionary*, CGFloat);
 
 - (CGFloat)bestPriceForOffers:(NSDictionary*)offersDic andBasicPrice:(CGFloat)basicPrice
 {
-    NSLog(@"Basic price : %f", basicPrice);
-    
     NSDictionary *types = [self generateOffersTypeDictionary];
     
     NSArray *offers = offersDic[@"offers"];
@@ -111,9 +105,7 @@ typedef CGFloat (^OfferType)(NSDictionary*, CGFloat);
             if ([type isEqualToString:offer[@"type"]])
             {
                 OfferType offerBlock = types[type];
-                CGFloat price = offerBlock(offer, basicPrice);
-                
-                NSLog(@"Price : %f", price);
+                CGFloat price = offerBlock(offer, basicPrice);            
                 
                 if (price < bestPrice)
                     bestPrice = price;
@@ -142,9 +134,6 @@ typedef CGFloat (^OfferType)(NSDictionary*, CGFloat);
             {
                 OfferType offerBlock = types[type];
                 CGFloat price = offerBlock(offer, basicPrice);
-                
-                NSLog(@"Price : %f", price);
-                
                 [array addObject:@(price)];
             }
             ++i;
@@ -177,7 +166,6 @@ typedef CGFloat (^OfferType)(NSDictionary*, CGFloat);
         CGFloat price = basicPrice - ((NSInteger)(basicPrice / sliceValue)) * slice;
         return price;
     };
-    
     
     NSDictionary *types = @{@"percentage":[percentageType copy],
                             @"minus":[minusType copy],

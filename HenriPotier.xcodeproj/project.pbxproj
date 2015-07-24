@@ -19,13 +19,16 @@
 		4C4283FF1B59077B00636840 /* BasketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4283FE1B59077B00636840 /* BasketViewController.m */; };
 		4C4284021B59468800636840 /* BookBoughtCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4284011B59468800636840 /* BookBoughtCell.m */; };
 		4C4284051B5950E900636840 /* PriceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4284041B5950E900636840 /* PriceCell.m */; };
-		4C4284081B5950FF00636840 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4284071B5950FF00636840 /* ButtonCell.m */; };
 		4C5545821B5D28AA00EDF63C /* HeaderTutorialReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5545811B5D28AA00EDF63C /* HeaderTutorialReusableView.m */; };
 		4C92920A1B57D8900092B944 /* BooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9292091B57D8900092B944 /* BooksViewController.m */; };
 		4C92920D1B57DD700092B944 /* BooksHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C92920C1B57DD700092B944 /* BooksHTTPClient.m */; };
 		4C99D3BC1B580AF300B97549 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C99D3BA1B580AF300B97549 /* Localizable.strings */; };
 		4CAF1DF31B5F99050010B86D /* InfosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF1DF21B5F99050010B86D /* InfosViewController.m */; };
 		4CAF1DF61B5FCE510010B86D /* OfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF1DF51B5FCE510010B86D /* OfferCell.m */; };
+		4CAF1DFE1B611BF70010B86D /* HenriPotier.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF1DFC1B611BF70010B86D /* HenriPotier.xcdatamodeld */; };
+		4CAF1E011B6129520010B86D /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF1E001B6129520010B86D /* Book.m */; };
+		4CAF1E041B6129670010B86D /* Basket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF1E031B6129670010B86D /* Basket.m */; };
+		4CAF1E071B612DE00010B86D /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF1E061B612DE00010B86D /* HistoryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,9 @@
 /* Begin PBXFileReference section */
 		18AEB1731F480D10836957B9 /* Pods-HenriPotier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HenriPotier.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HenriPotier/Pods-HenriPotier.debug.xcconfig"; sourceTree = "<group>"; };
 		4C0169121B5CFFEC002F515F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4C3D45401B6297EC0060741F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		4C3D45411B6297EC0060741F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4C3D45421B6297EC0060741F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C3F42551B57D346000BDFEF /* HenriPotier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HenriPotier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3F42591B57D346000BDFEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C3F425A1B57D346000BDFEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,8 +66,6 @@
 		4C4284011B59468800636840 /* BookBoughtCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookBoughtCell.m; path = Views/BookBoughtCell.m; sourceTree = "<group>"; };
 		4C4284031B5950E900636840 /* PriceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PriceCell.h; path = Views/PriceCell.h; sourceTree = "<group>"; };
 		4C4284041B5950E900636840 /* PriceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PriceCell.m; path = Views/PriceCell.m; sourceTree = "<group>"; };
-		4C4284061B5950FF00636840 /* ButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ButtonCell.h; path = Views/ButtonCell.h; sourceTree = "<group>"; };
-		4C4284071B5950FF00636840 /* ButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ButtonCell.m; path = Views/ButtonCell.m; sourceTree = "<group>"; };
 		4C5545801B5D28AA00EDF63C /* HeaderTutorialReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeaderTutorialReusableView.h; path = Views/HeaderTutorialReusableView.h; sourceTree = "<group>"; };
 		4C5545811B5D28AA00EDF63C /* HeaderTutorialReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeaderTutorialReusableView.m; path = Views/HeaderTutorialReusableView.m; sourceTree = "<group>"; };
 		4C9292081B57D8900092B944 /* BooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BooksViewController.h; path = Controllers/BooksViewController.h; sourceTree = "<group>"; };
@@ -73,6 +77,13 @@
 		4CAF1DF21B5F99050010B86D /* InfosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfosViewController.m; path = Controllers/InfosViewController.m; sourceTree = "<group>"; };
 		4CAF1DF41B5FCE510010B86D /* OfferCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OfferCell.h; path = Views/OfferCell.h; sourceTree = "<group>"; };
 		4CAF1DF51B5FCE510010B86D /* OfferCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OfferCell.m; path = Views/OfferCell.m; sourceTree = "<group>"; };
+		4CAF1DFD1B611BF70010B86D /* HenriPotier.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HenriPotier.xcdatamodel; sourceTree = "<group>"; };
+		4CAF1DFF1B6129520010B86D /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Book.h; path = Models/Entities/Book.h; sourceTree = "<group>"; };
+		4CAF1E001B6129520010B86D /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Book.m; path = Models/Entities/Book.m; sourceTree = "<group>"; };
+		4CAF1E021B6129670010B86D /* Basket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Basket.h; path = Models/Entities/Basket.h; sourceTree = "<group>"; };
+		4CAF1E031B6129670010B86D /* Basket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Basket.m; path = Models/Entities/Basket.m; sourceTree = "<group>"; };
+		4CAF1E051B612DE00010B86D /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryViewController.h; path = Controllers/HistoryViewController.h; sourceTree = "<group>"; };
+		4CAF1E061B612DE00010B86D /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryViewController.m; path = Controllers/HistoryViewController.m; sourceTree = "<group>"; };
 		511D659BAFA9AC5D310DDF0B /* libPods-HenriPotier.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HenriPotier.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3CBEC01A5767344B100676 /* Pods-HenriPotier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HenriPotier.release.xcconfig"; path = "Pods/Target Support Files/Pods-HenriPotier/Pods-HenriPotier.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +180,8 @@
 				4C4283FE1B59077B00636840 /* BasketViewController.m */,
 				4CAF1DF11B5F99050010B86D /* InfosViewController.h */,
 				4CAF1DF21B5F99050010B86D /* InfosViewController.m */,
+				4CAF1E051B612DE00010B86D /* HistoryViewController.h */,
+				4CAF1E061B612DE00010B86D /* HistoryViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -182,8 +195,6 @@
 				4C4284011B59468800636840 /* BookBoughtCell.m */,
 				4C4284031B5950E900636840 /* PriceCell.h */,
 				4C4284041B5950E900636840 /* PriceCell.m */,
-				4C4284061B5950FF00636840 /* ButtonCell.h */,
-				4C4284071B5950FF00636840 /* ButtonCell.m */,
 				4C5545801B5D28AA00EDF63C /* HeaderTutorialReusableView.h */,
 				4C5545811B5D28AA00EDF63C /* HeaderTutorialReusableView.m */,
 				4CAF1DF41B5FCE510010B86D /* OfferCell.h */,
@@ -195,10 +206,23 @@
 		4C3F42811B57D6E1000BDFEF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4CAF1DF81B611A6E0010B86D /* Entities */,
 				4C92920B1B57DD700092B944 /* BooksHTTPClient.h */,
 				4C92920C1B57DD700092B944 /* BooksHTTPClient.m */,
+				4CAF1DFC1B611BF70010B86D /* HenriPotier.xcdatamodeld */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		4CAF1DF81B611A6E0010B86D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4CAF1E021B6129670010B86D /* Basket.h */,
+				4CAF1E031B6129670010B86D /* Basket.m */,
+				4CAF1DFF1B6129520010B86D /* Book.h */,
+				4CAF1E001B6129520010B86D /* Book.m */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 		5828E2479E36BBD6F952220B /* Pods */ = {
@@ -284,6 +308,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 4C3F424C1B57D346000BDFEF;
 			productRefGroup = 4C3F42561B57D346000BDFEF /* Products */;
@@ -357,15 +382,18 @@
 			files = (
 				4CAF1DF61B5FCE510010B86D /* OfferCell.m in Sources */,
 				4C3F425E1B57D346000BDFEF /* AppDelegate.m in Sources */,
-				4C4284081B5950FF00636840 /* ButtonCell.m in Sources */,
+				4CAF1E071B612DE00010B86D /* HistoryViewController.m in Sources */,
 				4C5545821B5D28AA00EDF63C /* HeaderTutorialReusableView.m in Sources */,
 				4C4284051B5950E900636840 /* PriceCell.m in Sources */,
+				4CAF1E041B6129670010B86D /* Basket.m in Sources */,
 				4C92920D1B57DD700092B944 /* BooksHTTPClient.m in Sources */,
 				4C92920A1B57D8900092B944 /* BooksViewController.m in Sources */,
+				4CAF1DFE1B611BF70010B86D /* HenriPotier.xcdatamodeld in Sources */,
 				4C4283FC1B58F54700636840 /* BookCell.m in Sources */,
 				4C4284021B59468800636840 /* BookBoughtCell.m in Sources */,
 				4CAF1DF31B5F99050010B86D /* InfosViewController.m in Sources */,
 				4C4283FF1B59077B00636840 /* BasketViewController.m in Sources */,
+				4CAF1E011B6129520010B86D /* Book.m in Sources */,
 				4C3F425B1B57D346000BDFEF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +421,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4C3F42631B57D346000BDFEF /* Base */,
+				4C3D45401B6297EC0060741F /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -401,6 +430,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4C3F42681B57D347000BDFEF /* Base */,
+				4C3D45411B6297EC0060741F /* fr */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -409,6 +439,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4C99D3BB1B580AF300B97549 /* Base */,
+				4C3D45421B6297EC0060741F /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -589,6 +620,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4CAF1DFC1B611BF70010B86D /* HenriPotier.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4CAF1DFD1B611BF70010B86D /* HenriPotier.xcdatamodel */,
+			);
+			currentVersion = 4CAF1DFD1B611BF70010B86D /* HenriPotier.xcdatamodel */;
+			name = HenriPotier.xcdatamodeld;
+			path = Models/HenriPotier.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4C3F424D1B57D346000BDFEF /* Project object */;
 }

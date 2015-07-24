@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  The tutorial view to show how to selects books
+ */
 @interface HeaderTutorialReusableView : UICollectionReusableView
 
+/**
+ *  The title of the view
+ */
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
+
+/**
+ *  The tutorial description
+ */
 @property (nonatomic, weak) IBOutlet UILabel *descriptionLabel;
 
 @end

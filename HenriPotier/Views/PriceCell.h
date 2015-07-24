@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  The table cell for showing a price
+ */
 @interface PriceCell : UITableViewCell
 
+/**
+ *  The title of the price
+ */
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
+
+/**
+ *  The price value
+ */
 @property (nonatomic, weak) IBOutlet UILabel *priceLabel;
 
 @end

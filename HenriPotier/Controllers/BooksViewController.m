@@ -15,10 +15,11 @@
 #import "HeaderTutorialReusableView.h"
 #import <OpenSans/UIFont+OpenSans.h>
 
-@interface BooksViewController () <BooksHTTPClientDelegate>
 
-@property (nonatomic, strong) NSArray *books;
-@property (nonatomic, strong) NSMutableSet *booksSelected;
+static NSString * const reuseIdentifier = @"BookCell";
+
+
+@interface BooksViewController () <BooksHTTPClientDelegate>
 
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
 
@@ -26,8 +27,6 @@
 
 
 @implementation BooksViewController
-
-static NSString * const reuseIdentifier = @"BookCell";
 
 - (void)viewDidLoad
 {
@@ -50,6 +49,7 @@ static NSString * const reuseIdentifier = @"BookCell";
 {
     [super didReceiveMemoryWarning];
 }
+
 
 - (void)startRefresh:(id)sender
 {

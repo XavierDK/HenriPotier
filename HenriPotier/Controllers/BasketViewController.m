@@ -10,17 +10,16 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <AFNetworking/UIImageView+AFNetworking.h>
 #import <UIFont+OpenSans.h>
+#import <MagicalRecord/MagicalRecord.h>
 #import "BooksHTTPClient.h"
 #import "BookBoughtCell.h"
 #import "PriceCell.h"
-#import "ButtonCell.h"
 #import "InfosViewController.h"
+#import "Basket.h"
+#import "Book.h"
 
-@interface BasketViewController () <BooksHTTPClientDelegate>
 
-@property (nonatomic, strong) NSDictionary *offers;
-@property (nonatomic, assign) CGFloat basicPrice;
-@property (nonatomic, assign) CGFloat bestPrice;
+@interface BasketViewController () <BooksHTTPClientDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UIButton *buyButton;
 
@@ -31,9 +30,9 @@
 
 static NSString * const bookBoughtIdentifier = @"BookBoughtCell";
 static NSString * const priceIdentifier = @"PriceCell";
-static NSString * const buttonIdentifier = @"ButtonCell";
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.basicPrice = [[BooksHTTPClient sharedBooksHTTPClient] totalPriceForBooks:self.booksSelected];
@@ -49,13 +48,12 @@ static NSString * const buttonIdentifier = @"ButtonCell";
         [isbns addObject:book[@"isbn"]];
     }
     
-    NSLog(@"%@", isbns);
-    
     [[BooksHTTPClient sharedBooksHTTPClient] setDelegate:self];
     [[BooksHTTPClient sharedBooksHTTPClient] updateOffersForIsbns:isbns];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
 }
 
@@ -68,22 +66,59 @@ static NSString * const buttonIdentifier = @"ButtonCell";
     }
 }
 
+- (IBAction)boughtPressed:(id)sender
+{
+    Basket *basket = [Basket MR_createEntity];
+    
+    basket.basicPrice = @(self.basicPrice);
+    basket.bestPrice = @(self.bestPrice);
+    basket.date = [NSDate date];
+    
+    for (NSDictionary *bookDic in self.booksSelected)
+    {
+        Book *book = [Book MR_createEntity];
+        
+        book.title = bookDic[@"title"];
+        book.price = bookDic[@"price"];
+        book.isbn = bookDic[@"isbn"];
+        book.cover = bookDic[@"cover"];
+        
+        [basket addBooksObject:book];
+    }
+    
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Basket", nil) message:NSLocalizedString(@"Your basket has been saved!", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
+    alert.delegate = self;
+    [alert show];
+}
+
+
+#pragma mark - AlertView Delegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        [self.navigationController popViewControllerAnimated:TRUE] ;
+    }
+}
+
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return self.booksSelected.count + 2;
 }
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     UITableViewCell *cell = nil;
     
     if (indexPath.row < self.booksSelected.count)
@@ -116,7 +151,7 @@ static NSString * const buttonIdentifier = @"ButtonCell";
         
         cell = priceCell;
     }
-
+    
     
     return cell;
 }
@@ -130,8 +165,6 @@ static NSString * const buttonIdentifier = @"ButtonCell";
     
     self.offers = offers;
     
-    NSLog(@"%@", self.offers);
-    
     self.bestPrice = [[BooksHTTPClient sharedBooksHTTPClient] bestPriceForOffers:self.offers andBasicPrice:self.basicPrice];
     
     [self.tableView reloadData];
@@ -144,8 +177,5 @@ static NSString * const buttonIdentifier = @"ButtonCell";
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil) message:NSLocalizedString(@"An error appeared.", nil) delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil];
     [alert show];
 }
-
-
-
 
 @end
