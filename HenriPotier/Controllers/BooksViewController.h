@@ -18,9 +18,4 @@
  */
 @property (nonatomic, strong) NSArray *books;
 
-/**
- *  All the books selected
- */
-@property (nonatomic, strong) NSMutableSet *booksSelected;
-
 @end

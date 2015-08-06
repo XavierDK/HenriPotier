@@ -15,6 +15,9 @@
 {
     self.titleLabel.font = [UIFont openSansLightItalicFontOfSize:30.f];
     self.descriptionLabel.font = [UIFont openSansFontOfSize:14.f];
+    
+    self.titleLabel.text = @"Henri Potier";
+    self.descriptionLabel.text = NSLocalizedString(@"Click on the books that you want to buy and press the button confirm. You will discover our best offer!", nil);
 }
 
 @end

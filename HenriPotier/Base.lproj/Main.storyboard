@@ -38,7 +38,68 @@
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookCell" id="bir-EX-2qs" customClass="BookCell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookCell" id="Y8E-R5-dfV" customClass="BookCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="170" height="250"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BvC-tS-4QO">
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="250"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sj3-un-liV">
+                                            <rect key="frame" x="0.0" y="200" width="170" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El0-dn-ZP4">
+                                                    <rect key="frame" x="120" y="0.0" width="42" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="WaX-9u-nLF"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEm-U8-Kjj">
+                                                    <rect key="frame" x="8" y="0.0" width="114" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="YBX-3i-lwA"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="wEm-U8-Kjj" secondAttribute="centerY" id="2Bv-qs-aBB"/>
+                                                <constraint firstItem="wEm-U8-Kjj" firstAttribute="leading" secondItem="Sj3-un-liV" secondAttribute="leading" constant="8" id="J2o-xx-kBu"/>
+                                                <constraint firstItem="wEm-U8-Kjj" firstAttribute="width" secondItem="El0-dn-ZP4" secondAttribute="height" multiplier="52:25" constant="10" id="UFt-xc-DIo"/>
+                                                <constraint firstAttribute="height" constant="50" id="X9S-o7-ET4"/>
+                                                <constraint firstAttribute="trailing" secondItem="El0-dn-ZP4" secondAttribute="trailing" constant="8" id="bGr-kG-1Qd"/>
+                                                <constraint firstAttribute="centerY" secondItem="El0-dn-ZP4" secondAttribute="centerY" id="kmr-03-W2b"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.95009142290000004" green="0.95009142290000004" blue="0.95009142290000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="BvC-tS-4QO" firstAttribute="leading" secondItem="Y8E-R5-dfV" secondAttribute="leading" id="6cq-TO-haY"/>
+                                    <constraint firstAttribute="bottom" secondItem="BvC-tS-4QO" secondAttribute="bottom" id="Agg-m8-bHM"/>
+                                    <constraint firstItem="BvC-tS-4QO" firstAttribute="top" secondItem="Y8E-R5-dfV" secondAttribute="top" id="Fj1-vQ-Olz"/>
+                                    <constraint firstAttribute="trailing" secondItem="BvC-tS-4QO" secondAttribute="trailing" id="HOz-aw-wxu"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sj3-un-liV" secondAttribute="trailing" id="Wr8-1m-jrs"/>
+                                    <constraint firstItem="Sj3-un-liV" firstAttribute="leading" secondItem="Y8E-R5-dfV" secondAttribute="leading" id="deK-mB-BKB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Sj3-un-liV" secondAttribute="bottom" id="qR1-wV-FbT"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="BvC-tS-4QO" id="BfY-xd-Axh"/>
+                                    <outlet property="priceLabel" destination="El0-dn-ZP4" id="8Ma-Nd-8jr"/>
+                                    <outlet property="titleLabel" destination="wEm-U8-Kjj" id="cTT-Tj-u5b"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookSelectedCell" id="bir-EX-2qs" customClass="BookSelectedCell">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -50,7 +111,7 @@
                                         </imageView>
                                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pY6-7K-Hzy">
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="250"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZH-l1-MN2">
                                             <rect key="frame" x="0.0" y="200" width="170" height="50"/>
@@ -113,9 +174,7 @@
                                 <connections>
                                     <outlet property="imageView" destination="5td-sL-0pB" id="1FC-Tc-cyZ"/>
                                     <outlet property="priceLabel" destination="Mxe-AW-IUH" id="wS3-tg-isW"/>
-                                    <outlet property="selectionView" destination="pY6-7K-Hzy" id="zoa-EC-R6c"/>
                                     <outlet property="titleLabel" destination="I7T-gB-Cx2" id="IwE-K0-rgr"/>
-                                    <outlet property="validatedImg" destination="2el-ve-ERk" id="fgD-tY-3tt"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -174,6 +233,9 @@
                                 <outlet property="titleLabel" destination="WSg-rB-zOF" id="C8M-fE-LPu"/>
                             </connections>
                         </collectionReusableView>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="booksCollectionView"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="QK8-YY-MWZ" id="U2I-Z8-hyr"/>
                             <outlet property="delegate" destination="QK8-YY-MWZ" id="d7S-8m-Epl"/>
@@ -182,6 +244,9 @@
                     <navigationItem key="navigationItem" title="Books" id="OEy-Dn-Dhk">
                         <barButtonItem key="rightBarButtonItem" title="Confirm" id="5EV-pZ-eA7">
                             <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="confirm"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="confirmSelectionAction:" destination="QK8-YY-MWZ" id="jG9-GB-LAv"/>
                             </connections>
@@ -245,6 +310,7 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30,00 € " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWN-hj-VDd">
                                             <rect key="frame" x="520" y="13" width="64" height="50"/>
+                                            <accessibility key="accessibilityConfiguration" label="bookPriceLabel"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="64" id="2iS-ly-nSd"/>
                                                 <constraint firstAttribute="height" constant="50" id="rd9-GR-p1b"/>
@@ -293,6 +359,7 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30,00 € " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BtG-8G-ImH">
                                             <rect key="frame" x="298" y="13" width="288" height="50"/>
+                                            <accessibility key="accessibilityConfiguration" label="priceLabel"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="ZxM-RK-rxD"/>
                                             </constraints>
@@ -315,6 +382,10 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="basketTableView"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibilityElement" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="xRW-Mo-38e" id="dAA-B4-57V"/>
                             <outlet property="delegate" destination="xRW-Mo-38e" id="IMF-JK-zpz"/>
@@ -322,6 +393,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Basket" id="F5L-fq-M1k">
                         <barButtonItem key="rightBarButtonItem" image="InfosImg" id="msK-L6-Nb0">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="infos"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <segue destination="HgI-er-uoC" kind="show" identifier="SegueInfos" id="OUs-wN-sLj"/>
                             </connections>
@@ -397,6 +471,10 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="infosTableView"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isAccessibilityElement" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="HgI-er-uoC" id="iF6-kn-0fs"/>
                             <outlet property="delegate" destination="HgI-er-uoC" id="IZn-8I-oIi"/>

@@ -18,9 +18,24 @@
     self.offerResult.font = [UIFont openSansSemiBoldFontOfSize:16.f];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+- (void)setupForPrice:(CGFloat)price andOffer:(NSDictionary*)offer
 {
-    [super setSelected:selected animated:animated];
+    self.offerType.text = [NSString stringWithFormat:@"Type : %@", [NSLocalizedString(offer[@"type"], nil) uppercaseString]];
+    
+    if ([offer[@"type"] isEqualToString:@"percentage"])
+    {
+        self.offerValue.text = [NSString stringWithFormat:NSLocalizedString(@"Value: %@%%", nil), offer[@"value"]];
+    }
+    else if ([offer[@"type"] isEqualToString:@"minus"])
+    {
+        self.offerValue.text = [NSString stringWithFormat:NSLocalizedString(@"Value: %@€", nil), offer[@"value"]];
+    }
+    else if ([offer[@"type"] isEqualToString:@"slice"])
+    {
+        self.offerValue.text = [NSString stringWithFormat:NSLocalizedString(@"SliceValue: %@€, Value: %@€", nil), offer[@"sliceValue"], offer[@"value"]];
+    }
+    
+    self.offerResult.text = [NSString stringWithFormat:NSLocalizedString(@"Result price : %.2f€", nil), price];
 }
 
 @end

@@ -28,14 +28,13 @@
  */
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 
-/**
- *  A view to show if the book is selected or not
- */
-@property (weak, nonatomic) IBOutlet UIView *selectionView;
+
 
 /**
- *  An image to show if the book is selected or not
+ *  Method to setup atrtibutes of the book cell
+ *
+ *  @param book The book disctionary
  */
-@property (weak, nonatomic) IBOutlet UIImageView *validatedImg;
+- (void)setupForBook:(NSDictionary*)book;
 
 @end

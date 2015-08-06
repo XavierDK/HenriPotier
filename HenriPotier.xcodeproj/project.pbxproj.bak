@@ -1,0 +1,768 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12560A8DCCD3C1DBCBFB8EF2 /* libPods-HenriPotier.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 511D659BAFA9AC5D310DDF0B /* libPods-HenriPotier.a */; };
+		4C0169131B5CFFEC002F515F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0169121B5CFFEC002F515F /* QuartzCore.framework */; };
+		4C3372DE1B71FEEE0047B26B /* BooksManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3372DD1B71FEEE0047B26B /* BooksManager.m */; };
+		4C3372E11B7202220047B26B /* BooksViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3372E01B7202220047B26B /* BooksViewControllerDataSource.m */; };
+		4C3372E41B720EAB0047B26B /* BasketViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3372E31B720EAB0047B26B /* BasketViewControllerDataSource.m */; };
+		4C3372E71B7213470047B26B /* BookSelectedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3372E61B7213470047B26B /* BookSelectedCell.m */; };
+		4C3372EA1B72189E0047B26B /* InfosViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3372E91B72189E0047B26B /* InfosViewControllerDataSource.m */; };
+		4C3372ED1B723C3B0047B26B /* DateHeaderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3372EC1B723C3B0047B26B /* DateHeaderTableView.m */; };
+		4C3372F01B7240470047B26B /* HistoryViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3372EF1B7240470047B26B /* HistoryViewControllerDataSource.m */; };
+		4C3F425B1B57D346000BDFEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F425A1B57D346000BDFEF /* main.m */; };
+		4C3F425E1B57D346000BDFEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F425D1B57D346000BDFEF /* AppDelegate.m */; };
+		4C3F42641B57D346000BDFEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F42621B57D346000BDFEF /* Main.storyboard */; };
+		4C3F42661B57D347000BDFEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F42651B57D347000BDFEF /* Images.xcassets */; };
+		4C3F42691B57D347000BDFEF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3F42671B57D347000BDFEF /* LaunchScreen.xib */; };
+		4C3F42751B57D347000BDFEF /* HenriPotierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3F42741B57D347000BDFEF /* HenriPotierTests.m */; };
+		4C4283FC1B58F54700636840 /* BookCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4283FB1B58F54700636840 /* BookCell.m */; };
+		4C4283FF1B59077B00636840 /* BasketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4283FE1B59077B00636840 /* BasketViewController.m */; };
+		4C4284021B59468800636840 /* BookBoughtCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4284011B59468800636840 /* BookBoughtCell.m */; };
+		4C4284051B5950E900636840 /* PriceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4284041B5950E900636840 /* PriceCell.m */; };
+		4C5545821B5D28AA00EDF63C /* HeaderTutorialReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5545811B5D28AA00EDF63C /* HeaderTutorialReusableView.m */; };
+		4C92920A1B57D8900092B944 /* BooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9292091B57D8900092B944 /* BooksViewController.m */; };
+		4C92920D1B57DD700092B944 /* BooksHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C92920C1B57DD700092B944 /* BooksHTTPClient.m */; };
+		4C99D3BC1B580AF300B97549 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C99D3BA1B580AF300B97549 /* Localizable.strings */; };
+		4CAF1DF31B5F99050010B86D /* InfosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF1DF21B5F99050010B86D /* InfosViewController.m */; };
+		4CAF1DF61B5FCE510010B86D /* OfferCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF1DF51B5FCE510010B86D /* OfferCell.m */; };
+		4CAF1DFE1B611BF70010B86D /* HenriPotier.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF1DFC1B611BF70010B86D /* HenriPotier.xcdatamodeld */; };
+		4CAF1E011B6129520010B86D /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF1E001B6129520010B86D /* Book.m */; };
+		4CAF1E041B6129670010B86D /* Basket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF1E031B6129670010B86D /* Basket.m */; };
+		4CAF1E071B612DE00010B86D /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAF1E061B612DE00010B86D /* HistoryViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C3F426F1B57D347000BDFEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C3F424D1B57D346000BDFEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C3F42541B57D346000BDFEF;
+			remoteInfo = HenriPotier;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18AEB1731F480D10836957B9 /* Pods-HenriPotier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HenriPotier.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HenriPotier/Pods-HenriPotier.debug.xcconfig"; sourceTree = "<group>"; };
+		4C0169121B5CFFEC002F515F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4C3372DC1B71FEEE0047B26B /* BooksManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BooksManager.h; path = Models/BooksManager.h; sourceTree = "<group>"; };
+		4C3372DD1B71FEEE0047B26B /* BooksManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BooksManager.m; path = Models/BooksManager.m; sourceTree = "<group>"; };
+		4C3372DF1B7202220047B26B /* BooksViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BooksViewControllerDataSource.h; path = Controllers/DataSources/BooksViewControllerDataSource.h; sourceTree = "<group>"; };
+		4C3372E01B7202220047B26B /* BooksViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BooksViewControllerDataSource.m; path = Controllers/DataSources/BooksViewControllerDataSource.m; sourceTree = "<group>"; };
+		4C3372E21B720EAB0047B26B /* BasketViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasketViewControllerDataSource.h; path = Controllers/DataSources/BasketViewControllerDataSource.h; sourceTree = "<group>"; };
+		4C3372E31B720EAB0047B26B /* BasketViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasketViewControllerDataSource.m; path = Controllers/DataSources/BasketViewControllerDataSource.m; sourceTree = "<group>"; };
+		4C3372E51B7213470047B26B /* BookSelectedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookSelectedCell.h; path = Views/BookSelectedCell.h; sourceTree = "<group>"; };
+		4C3372E61B7213470047B26B /* BookSelectedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookSelectedCell.m; path = Views/BookSelectedCell.m; sourceTree = "<group>"; };
+		4C3372E81B72189E0047B26B /* InfosViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfosViewControllerDataSource.h; path = Controllers/DataSources/InfosViewControllerDataSource.h; sourceTree = "<group>"; };
+		4C3372E91B72189E0047B26B /* InfosViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfosViewControllerDataSource.m; path = Controllers/DataSources/InfosViewControllerDataSource.m; sourceTree = "<group>"; };
+		4C3372EB1B723C3B0047B26B /* DateHeaderTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateHeaderTableView.h; path = Views/DateHeaderTableView.h; sourceTree = "<group>"; };
+		4C3372EC1B723C3B0047B26B /* DateHeaderTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateHeaderTableView.m; path = Views/DateHeaderTableView.m; sourceTree = "<group>"; };
+		4C3372EE1B7240470047B26B /* HistoryViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryViewControllerDataSource.h; path = Controllers/DataSources/HistoryViewControllerDataSource.h; sourceTree = "<group>"; };
+		4C3372EF1B7240470047B26B /* HistoryViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryViewControllerDataSource.m; path = Controllers/DataSources/HistoryViewControllerDataSource.m; sourceTree = "<group>"; };
+		4C3D45401B6297EC0060741F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		4C3D45411B6297EC0060741F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4C3D45421B6297EC0060741F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C3F42551B57D346000BDFEF /* HenriPotier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HenriPotier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C3F42591B57D346000BDFEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C3F425A1B57D346000BDFEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4C3F425C1B57D346000BDFEF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4C3F425D1B57D346000BDFEF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4C3F42631B57D346000BDFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4C3F42651B57D347000BDFEF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4C3F42681B57D347000BDFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		4C3F426E1B57D347000BDFEF /* HenriPotierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HenriPotierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C3F42731B57D347000BDFEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C3F42741B57D347000BDFEF /* HenriPotierTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HenriPotierTests.m; sourceTree = "<group>"; };
+		4C4283FA1B58F54700636840 /* BookCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookCell.h; path = Views/BookCell.h; sourceTree = "<group>"; };
+		4C4283FB1B58F54700636840 /* BookCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookCell.m; path = Views/BookCell.m; sourceTree = "<group>"; };
+		4C4283FD1B59077B00636840 /* BasketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasketViewController.h; path = Controllers/BasketViewController.h; sourceTree = "<group>"; };
+		4C4283FE1B59077B00636840 /* BasketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasketViewController.m; path = Controllers/BasketViewController.m; sourceTree = "<group>"; };
+		4C4284001B59468800636840 /* BookBoughtCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BookBoughtCell.h; path = Views/BookBoughtCell.h; sourceTree = "<group>"; };
+		4C4284011B59468800636840 /* BookBoughtCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BookBoughtCell.m; path = Views/BookBoughtCell.m; sourceTree = "<group>"; };
+		4C4284031B5950E900636840 /* PriceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PriceCell.h; path = Views/PriceCell.h; sourceTree = "<group>"; };
+		4C4284041B5950E900636840 /* PriceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PriceCell.m; path = Views/PriceCell.m; sourceTree = "<group>"; };
+		4C5545801B5D28AA00EDF63C /* HeaderTutorialReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeaderTutorialReusableView.h; path = Views/HeaderTutorialReusableView.h; sourceTree = "<group>"; };
+		4C5545811B5D28AA00EDF63C /* HeaderTutorialReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeaderTutorialReusableView.m; path = Views/HeaderTutorialReusableView.m; sourceTree = "<group>"; };
+		4C9292081B57D8900092B944 /* BooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BooksViewController.h; path = Controllers/BooksViewController.h; sourceTree = "<group>"; };
+		4C9292091B57D8900092B944 /* BooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BooksViewController.m; path = Controllers/BooksViewController.m; sourceTree = "<group>"; };
+		4C92920B1B57DD700092B944 /* BooksHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BooksHTTPClient.h; path = Models/BooksHTTPClient.h; sourceTree = "<group>"; };
+		4C92920C1B57DD700092B944 /* BooksHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BooksHTTPClient.m; path = Models/BooksHTTPClient.m; sourceTree = "<group>"; };
+		4C99D3BB1B580AF300B97549 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4CAF1DF11B5F99050010B86D /* InfosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfosViewController.h; path = Controllers/InfosViewController.h; sourceTree = "<group>"; };
+		4CAF1DF21B5F99050010B86D /* InfosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfosViewController.m; path = Controllers/InfosViewController.m; sourceTree = "<group>"; };
+		4CAF1DF41B5FCE510010B86D /* OfferCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OfferCell.h; path = Views/OfferCell.h; sourceTree = "<group>"; };
+		4CAF1DF51B5FCE510010B86D /* OfferCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OfferCell.m; path = Views/OfferCell.m; sourceTree = "<group>"; };
+		4CAF1DFD1B611BF70010B86D /* HenriPotier.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HenriPotier.xcdatamodel; sourceTree = "<group>"; };
+		4CAF1DFF1B6129520010B86D /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Book.h; path = Models/Entities/Book.h; sourceTree = "<group>"; };
+		4CAF1E001B6129520010B86D /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Book.m; path = Models/Entities/Book.m; sourceTree = "<group>"; };
+		4CAF1E021B6129670010B86D /* Basket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Basket.h; path = Models/Entities/Basket.h; sourceTree = "<group>"; };
+		4CAF1E031B6129670010B86D /* Basket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Basket.m; path = Models/Entities/Basket.m; sourceTree = "<group>"; };
+		4CAF1E051B612DE00010B86D /* HistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryViewController.h; path = Controllers/HistoryViewController.h; sourceTree = "<group>"; };
+		4CAF1E061B612DE00010B86D /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryViewController.m; path = Controllers/HistoryViewController.m; sourceTree = "<group>"; };
+		511D659BAFA9AC5D310DDF0B /* libPods-HenriPotier.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HenriPotier.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B3CBEC01A5767344B100676 /* Pods-HenriPotier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HenriPotier.release.xcconfig"; path = "Pods/Target Support Files/Pods-HenriPotier/Pods-HenriPotier.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C3F42521B57D346000BDFEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C0169131B5CFFEC002F515F /* QuartzCore.framework in Frameworks */,
+				12560A8DCCD3C1DBCBFB8EF2 /* libPods-HenriPotier.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3F426B1B57D347000BDFEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C3372DB1B71FEBC0047B26B /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				4C3372DF1B7202220047B26B /* BooksViewControllerDataSource.h */,
+				4C3372E01B7202220047B26B /* BooksViewControllerDataSource.m */,
+				4C3372E21B720EAB0047B26B /* BasketViewControllerDataSource.h */,
+				4C3372E31B720EAB0047B26B /* BasketViewControllerDataSource.m */,
+				4C3372E81B72189E0047B26B /* InfosViewControllerDataSource.h */,
+				4C3372E91B72189E0047B26B /* InfosViewControllerDataSource.m */,
+				4C3372EE1B7240470047B26B /* HistoryViewControllerDataSource.h */,
+				4C3372EF1B7240470047B26B /* HistoryViewControllerDataSource.m */,
+			);
+			name = DataSources;
+			sourceTree = "<group>";
+		};
+		4C3F424C1B57D346000BDFEF = {
+			isa = PBXGroup;
+			children = (
+				4C3F42571B57D346000BDFEF /* HenriPotier */,
+				4C3F42711B57D347000BDFEF /* HenriPotierTests */,
+				4C3F42561B57D346000BDFEF /* Products */,
+				5828E2479E36BBD6F952220B /* Pods */,
+				5ED5E67F8C5FC77C18342A2D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4C3F42561B57D346000BDFEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F42551B57D346000BDFEF /* HenriPotier.app */,
+				4C3F426E1B57D347000BDFEF /* HenriPotierTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C3F42571B57D346000BDFEF /* HenriPotier */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F425C1B57D346000BDFEF /* AppDelegate.h */,
+				4C3F425D1B57D346000BDFEF /* AppDelegate.m */,
+				4C3F42621B57D346000BDFEF /* Main.storyboard */,
+				4C3F42671B57D347000BDFEF /* LaunchScreen.xib */,
+				4C3F42651B57D347000BDFEF /* Images.xcassets */,
+				4C3F42811B57D6E1000BDFEF /* Models */,
+				4C3F42801B57D6D5000BDFEF /* Views */,
+				4C3F427F1B57D6CE000BDFEF /* Controllers */,
+				4C3F42581B57D346000BDFEF /* Supporting Files */,
+			);
+			path = HenriPotier;
+			sourceTree = "<group>";
+		};
+		4C3F42581B57D346000BDFEF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F42591B57D346000BDFEF /* Info.plist */,
+				4C3F425A1B57D346000BDFEF /* main.m */,
+				4C99D3BA1B580AF300B97549 /* Localizable.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C3F42711B57D347000BDFEF /* HenriPotierTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F42741B57D347000BDFEF /* HenriPotierTests.m */,
+				4C3F42721B57D347000BDFEF /* Supporting Files */,
+			);
+			path = HenriPotierTests;
+			sourceTree = "<group>";
+		};
+		4C3F42721B57D347000BDFEF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C3F42731B57D347000BDFEF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C3F427F1B57D6CE000BDFEF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C3372DB1B71FEBC0047B26B /* DataSources */,
+				4C9292081B57D8900092B944 /* BooksViewController.h */,
+				4C9292091B57D8900092B944 /* BooksViewController.m */,
+				4C4283FD1B59077B00636840 /* BasketViewController.h */,
+				4C4283FE1B59077B00636840 /* BasketViewController.m */,
+				4CAF1DF11B5F99050010B86D /* InfosViewController.h */,
+				4CAF1DF21B5F99050010B86D /* InfosViewController.m */,
+				4CAF1E051B612DE00010B86D /* HistoryViewController.h */,
+				4CAF1E061B612DE00010B86D /* HistoryViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		4C3F42801B57D6D5000BDFEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C4283FA1B58F54700636840 /* BookCell.h */,
+				4C4283FB1B58F54700636840 /* BookCell.m */,
+				4C3372E51B7213470047B26B /* BookSelectedCell.h */,
+				4C3372E61B7213470047B26B /* BookSelectedCell.m */,
+				4C4284001B59468800636840 /* BookBoughtCell.h */,
+				4C4284011B59468800636840 /* BookBoughtCell.m */,
+				4C4284031B5950E900636840 /* PriceCell.h */,
+				4C4284041B5950E900636840 /* PriceCell.m */,
+				4C5545801B5D28AA00EDF63C /* HeaderTutorialReusableView.h */,
+				4C5545811B5D28AA00EDF63C /* HeaderTutorialReusableView.m */,
+				4CAF1DF41B5FCE510010B86D /* OfferCell.h */,
+				4CAF1DF51B5FCE510010B86D /* OfferCell.m */,
+				4C3372EB1B723C3B0047B26B /* DateHeaderTableView.h */,
+				4C3372EC1B723C3B0047B26B /* DateHeaderTableView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4C3F42811B57D6E1000BDFEF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4CAF1DF81B611A6E0010B86D /* Entities */,
+				4C92920B1B57DD700092B944 /* BooksHTTPClient.h */,
+				4C92920C1B57DD700092B944 /* BooksHTTPClient.m */,
+				4C3372DC1B71FEEE0047B26B /* BooksManager.h */,
+				4C3372DD1B71FEEE0047B26B /* BooksManager.m */,
+				4CAF1DFC1B611BF70010B86D /* HenriPotier.xcdatamodeld */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4CAF1DF81B611A6E0010B86D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4CAF1E021B6129670010B86D /* Basket.h */,
+				4CAF1E031B6129670010B86D /* Basket.m */,
+				4CAF1DFF1B6129520010B86D /* Book.h */,
+				4CAF1E001B6129520010B86D /* Book.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		5828E2479E36BBD6F952220B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18AEB1731F480D10836957B9 /* Pods-HenriPotier.debug.xcconfig */,
+				5B3CBEC01A5767344B100676 /* Pods-HenriPotier.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5ED5E67F8C5FC77C18342A2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C0169121B5CFFEC002F515F /* QuartzCore.framework */,
+				511D659BAFA9AC5D310DDF0B /* libPods-HenriPotier.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C3F42541B57D346000BDFEF /* HenriPotier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C3F42781B57D347000BDFEF /* Build configuration list for PBXNativeTarget "HenriPotier" */;
+			buildPhases = (
+				D16DC044660B2B183489A79C /* Check Pods Manifest.lock */,
+				4C3F42511B57D346000BDFEF /* Sources */,
+				4C3F42521B57D346000BDFEF /* Frameworks */,
+				4C3F42531B57D346000BDFEF /* Resources */,
+				AE732A92EC64CF1D1AC9DE6F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HenriPotier;
+			productName = HenriPotier;
+			productReference = 4C3F42551B57D346000BDFEF /* HenriPotier.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C3F426D1B57D347000BDFEF /* HenriPotierTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C3F427B1B57D347000BDFEF /* Build configuration list for PBXNativeTarget "HenriPotierTests" */;
+			buildPhases = (
+				4C3F426A1B57D347000BDFEF /* Sources */,
+				4C3F426B1B57D347000BDFEF /* Frameworks */,
+				4C3F426C1B57D347000BDFEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C3F42701B57D347000BDFEF /* PBXTargetDependency */,
+			);
+			name = HenriPotierTests;
+			productName = HenriPotierTests;
+			productReference = 4C3F426E1B57D347000BDFEF /* HenriPotierTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C3F424D1B57D346000BDFEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = XavierDeKoninck;
+				TargetAttributes = {
+					4C3F42541B57D346000BDFEF = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					4C3F426D1B57D347000BDFEF = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 4C3F42541B57D346000BDFEF;
+					};
+				};
+			};
+			buildConfigurationList = 4C3F42501B57D346000BDFEF /* Build configuration list for PBXProject "HenriPotier" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				fr,
+			);
+			mainGroup = 4C3F424C1B57D346000BDFEF;
+			productRefGroup = 4C3F42561B57D346000BDFEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C3F42541B57D346000BDFEF /* HenriPotier */,
+				4C3F426D1B57D347000BDFEF /* HenriPotierTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C3F42531B57D346000BDFEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C3F42641B57D346000BDFEF /* Main.storyboard in Resources */,
+				4C99D3BC1B580AF300B97549 /* Localizable.strings in Resources */,
+				4C3F42691B57D347000BDFEF /* LaunchScreen.xib in Resources */,
+				4C3F42661B57D347000BDFEF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3F426C1B57D347000BDFEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AE732A92EC64CF1D1AC9DE6F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HenriPotier/Pods-HenriPotier-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D16DC044660B2B183489A79C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C3F42511B57D346000BDFEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CAF1DF61B5FCE510010B86D /* OfferCell.m in Sources */,
+				4C3F425E1B57D346000BDFEF /* AppDelegate.m in Sources */,
+				4C3372DE1B71FEEE0047B26B /* BooksManager.m in Sources */,
+				4CAF1E071B612DE00010B86D /* HistoryViewController.m in Sources */,
+				4C5545821B5D28AA00EDF63C /* HeaderTutorialReusableView.m in Sources */,
+				4C4284051B5950E900636840 /* PriceCell.m in Sources */,
+				4CAF1E041B6129670010B86D /* Basket.m in Sources */,
+				4C3372EA1B72189E0047B26B /* InfosViewControllerDataSource.m in Sources */,
+				4C92920D1B57DD700092B944 /* BooksHTTPClient.m in Sources */,
+				4C92920A1B57D8900092B944 /* BooksViewController.m in Sources */,
+				4C3372E11B7202220047B26B /* BooksViewControllerDataSource.m in Sources */,
+				4C3372E71B7213470047B26B /* BookSelectedCell.m in Sources */,
+				4CAF1DFE1B611BF70010B86D /* HenriPotier.xcdatamodeld in Sources */,
+				4C4283FC1B58F54700636840 /* BookCell.m in Sources */,
+				4C3372F01B7240470047B26B /* HistoryViewControllerDataSource.m in Sources */,
+				4C3372E41B720EAB0047B26B /* BasketViewControllerDataSource.m in Sources */,
+				4C4284021B59468800636840 /* BookBoughtCell.m in Sources */,
+				4CAF1DF31B5F99050010B86D /* InfosViewController.m in Sources */,
+				4C4283FF1B59077B00636840 /* BasketViewController.m in Sources */,
+				4C3372ED1B723C3B0047B26B /* DateHeaderTableView.m in Sources */,
+				4CAF1E011B6129520010B86D /* Book.m in Sources */,
+				4C3F425B1B57D346000BDFEF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C3F426A1B57D347000BDFEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C3F42751B57D347000BDFEF /* HenriPotierTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C3F42701B57D347000BDFEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C3F42541B57D346000BDFEF /* HenriPotier */;
+			targetProxy = 4C3F426F1B57D347000BDFEF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4C3F42621B57D346000BDFEF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C3F42631B57D346000BDFEF /* Base */,
+				4C3D45401B6297EC0060741F /* fr */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4C3F42671B57D347000BDFEF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C3F42681B57D347000BDFEF /* Base */,
+				4C3D45411B6297EC0060741F /* fr */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		4C99D3BA1B580AF300B97549 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C99D3BB1B580AF300B97549 /* Base */,
+				4C3D45421B6297EC0060741F /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4C3372D81B71338E0047B26B /* Debug copy */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug copy";
+		};
+		4C3372D91B71338E0047B26B /* Debug copy */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18AEB1731F480D10836957B9 /* Pods-HenriPotier.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HenriPotier/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Debug copy";
+		};
+		4C3372DA1B71338E0047B26B /* Debug copy */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HenriPotierTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HenriPotier.app/HenriPotier";
+			};
+			name = "Debug copy";
+		};
+		4C3F42761B57D347000BDFEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C3F42771B57D347000BDFEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C3F42791B57D347000BDFEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18AEB1731F480D10836957B9 /* Pods-HenriPotier.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HenriPotier/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4C3F427A1B57D347000BDFEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B3CBEC01A5767344B100676 /* Pods-HenriPotier.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HenriPotier/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		4C3F427C1B57D347000BDFEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HenriPotierTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HenriPotier.app/HenriPotier";
+			};
+			name = Debug;
+		};
+		4C3F427D1B57D347000BDFEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HenriPotierTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HenriPotier.app/HenriPotier";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C3F42501B57D346000BDFEF /* Build configuration list for PBXProject "HenriPotier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C3F42761B57D347000BDFEF /* Debug */,
+				4C3372D81B71338E0047B26B /* Debug copy */,
+				4C3F42771B57D347000BDFEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C3F42781B57D347000BDFEF /* Build configuration list for PBXNativeTarget "HenriPotier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C3F42791B57D347000BDFEF /* Debug */,
+				4C3372D91B71338E0047B26B /* Debug copy */,
+				4C3F427A1B57D347000BDFEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C3F427B1B57D347000BDFEF /* Build configuration list for PBXNativeTarget "HenriPotierTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C3F427C1B57D347000BDFEF /* Debug */,
+				4C3372DA1B71338E0047B26B /* Debug copy */,
+				4C3F427D1B57D347000BDFEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4CAF1DFC1B611BF70010B86D /* HenriPotier.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4CAF1DFD1B611BF70010B86D /* HenriPotier.xcdatamodel */,
+			);
+			currentVersion = 4CAF1DFD1B611BF70010B86D /* HenriPotier.xcdatamodel */;
+			name = HenriPotier.xcdatamodeld;
+			path = Models/HenriPotier.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4C3F424D1B57D346000BDFEF /* Project object */;
+}

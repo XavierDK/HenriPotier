@@ -7,13 +7,12 @@
 //
 
 #import "BasketViewController.h"
+#import "BasketViewControllerDataSource.h"
 #import <SVProgressHUD/SVProgressHUD.h>
-#import <AFNetworking/UIImageView+AFNetworking.h>
 #import <UIFont+OpenSans.h>
 #import <MagicalRecord/MagicalRecord.h>
 #import "BooksHTTPClient.h"
-#import "BookBoughtCell.h"
-#import "PriceCell.h"
+#import "BooksManager.h"
 #import "InfosViewController.h"
 #import "Basket.h"
 #import "Book.h"
@@ -23,20 +22,17 @@
 
 @property (nonatomic, weak) IBOutlet UIButton *buyButton;
 
+@property (nonatomic, strong) BooksHTTPClient *booksClient;
+@property (nonatomic, strong) BasketViewControllerDataSource *basketControllerDataSource;
+
 @end
 
 
 @implementation BasketViewController
 
-static NSString * const bookBoughtIdentifier = @"BookBoughtCell";
-static NSString * const priceIdentifier = @"PriceCell";
-
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    
-    self.basicPrice = [[BooksHTTPClient sharedBooksHTTPClient] totalPriceForBooks:self.booksSelected];
-    self.bestPrice = self.basicPrice;
+    [super viewDidLoad];    
     
     self.buyButton.titleLabel.font = [UIFont openSansBoldFontOfSize:18.f];
     
@@ -44,25 +40,27 @@ static NSString * const priceIdentifier = @"PriceCell";
     
     NSMutableArray *isbns = [NSMutableArray array];
     for (NSDictionary *book in self.booksSelected)
-    {
         [isbns addObject:book[@"isbn"]];
-    }
     
-    [[BooksHTTPClient sharedBooksHTTPClient] setDelegate:self];
-    [[BooksHTTPClient sharedBooksHTTPClient] updateOffersForIsbns:isbns];
+    self.booksClient = [[BooksHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:BooksURLString]];
+    [self.booksClient setDelegate:self];
+    [self.booksClient updateOffersForIsbns:isbns];
+    
+    [self setupDataSource];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)setupDataSource
 {
-    [super didReceiveMemoryWarning];
+    self.basketControllerDataSource = [[BasketViewControllerDataSource alloc] init];
+    self.basketControllerDataSource.booksSelected = self.booksSelected;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"SegueInfos"])
     {
-        ((InfosViewController*)segue.destinationViewController).offers = self.offers;
-        ((InfosViewController*)segue.destinationViewController).basicPrice = self.basicPrice;
+        ((InfosViewController*)segue.destinationViewController).offers = self.basketControllerDataSource.offers;
+        ((InfosViewController*)segue.destinationViewController).basicPrice = self.basketControllerDataSource.basicPrice;
     }
 }
 
@@ -70,8 +68,8 @@ static NSString * const priceIdentifier = @"PriceCell";
 {
     Basket *basket = [Basket MR_createEntity];
     
-    basket.basicPrice = @(self.basicPrice);
-    basket.bestPrice = @(self.bestPrice);
+    basket.basicPrice = @(self.basketControllerDataSource.basicPrice);
+    basket.bestPrice = @(self.basketControllerDataSource.bestPrice);
     basket.date = [NSDate date];
     
     for (NSDictionary *bookDic in self.booksSelected)
@@ -100,7 +98,7 @@ static NSString * const priceIdentifier = @"PriceCell";
 {
     if (buttonIndex == 0)
     {
-        [self.navigationController popViewControllerAnimated:TRUE] ;
+        [self.navigationController popViewControllerAnimated:YES] ;
     }
 }
 
@@ -109,51 +107,17 @@ static NSString * const priceIdentifier = @"PriceCell";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return [self.basketControllerDataSource numberOfSectionsInTableView:tableView];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.booksSelected.count + 2;
+    return [self.basketControllerDataSource tableView:tableView numberOfRowsInSection:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = nil;
-    
-    if (indexPath.row < self.booksSelected.count)
-    {
-        BookBoughtCell *bookCell = [tableView dequeueReusableCellWithIdentifier:bookBoughtIdentifier forIndexPath:indexPath];
-        
-        [bookCell.imgView setImageWithURL:[NSURL URLWithString:self.booksSelected[indexPath.row][@"cover"]]];
-        bookCell.titleLabel.text = self.booksSelected[indexPath.row][@"title"];
-        bookCell.priceLabel.text = [NSString stringWithFormat:@"%@ €", self.booksSelected[indexPath.row][@"price"]];
-        
-        cell = bookCell;
-    }
-    
-    else if (indexPath.row == self.booksSelected.count)
-    {
-        PriceCell *priceCell = [tableView dequeueReusableCellWithIdentifier:priceIdentifier forIndexPath:indexPath];
-        
-        priceCell.titleLabel.text = NSLocalizedString(@"TOTAL", nil);
-        priceCell.priceLabel.text = [NSString stringWithFormat:@"%.2f €", self.basicPrice];
-        
-        cell = priceCell;
-    }
-    
-    else if (indexPath.row == self.booksSelected.count + 1)
-    {
-        PriceCell *priceCell = [tableView dequeueReusableCellWithIdentifier:priceIdentifier forIndexPath:indexPath];
-        
-        priceCell.titleLabel.text = NSLocalizedString(@"TOTAL AFTER OFFER", nil);
-        priceCell.priceLabel.text = [NSString stringWithFormat:@"%.2f €", self.bestPrice];
-        
-        cell = priceCell;
-    }
-    
-    
-    return cell;
+    return [self.basketControllerDataSource tableView:tableView cellForRowAtIndexPath:indexPath];
 }
 
 
@@ -163,9 +127,7 @@ static NSString * const priceIdentifier = @"PriceCell";
 {
     [SVProgressHUD dismiss];
     
-    self.offers = offers;
-    
-    self.bestPrice = [[BooksHTTPClient sharedBooksHTTPClient] bestPriceForOffers:self.offers andBasicPrice:self.basicPrice];
+    self.basketControllerDataSource.offers = offers;
     
     [self.tableView reloadData];
 }

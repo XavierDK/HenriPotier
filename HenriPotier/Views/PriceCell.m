@@ -17,10 +17,10 @@
     self.priceLabel.font = [UIFont openSansSemiBoldFontOfSize:16.f];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)setupForPrice:(CGFloat)price andTitle:(NSString *)title
+{
+    self.titleLabel.text = title;
+    self.priceLabel.text = [NSString stringWithFormat:@"%.2f €", price];
 }
 
 @end

@@ -4,8 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>HenriPotier-cal.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>HenriPotier.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
@@ -18,6 +25,11 @@
 			<true/>
 		</dict>
 		<key>4C3F426D1B57D347000BDFEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>51f7209af2d74f4a922502a2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

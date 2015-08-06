@@ -28,4 +28,12 @@
  */
 @property (nonatomic, weak) IBOutlet UILabel *offerResult;
 
+/**
+ *  Method to setup the cell for a price and an offer
+ *
+ *  @param price The price
+ *  @param price The offer
+ */
+- (void)setupForPrice:(CGFloat)price andOffer:(NSDictionary*)offer;
+
 @end

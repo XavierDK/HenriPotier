@@ -23,4 +23,12 @@
  */
 @property (nonatomic, weak) IBOutlet UILabel *priceLabel;
 
+/**
+ *  Method to setup the cell with a price
+ *
+ *  @param price The price
+ *  @param price The title of the price
+ */
+- (void)setupForPrice:(CGFloat)price andTitle:(NSString*)title;
+
 @end

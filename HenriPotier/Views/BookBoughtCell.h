@@ -28,4 +28,11 @@
  */
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 
+/**
+ *  Method to setup atrtibutes of the book bought cell
+ *
+ *  @param book The book disctionary
+ */
+- (void)setupForBook:(NSDictionary*)book;
+
 @end

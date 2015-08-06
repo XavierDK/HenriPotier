@@ -8,6 +8,7 @@
 
 #import "BookBoughtCell.h"
 #import <OpenSans/UIFont+OpenSans.h>
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 @implementation BookBoughtCell
 
@@ -17,8 +18,11 @@
     self.priceLabel.font = [UIFont openSansSemiBoldFontOfSize:16.f];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+- (void)setupForBook:(NSDictionary*)book
+{
+    [self.imgView setImageWithURL:[NSURL URLWithString:book[@"cover"]]];
+    self.titleLabel.text = book[@"title"];
+    self.priceLabel.text = [NSString stringWithFormat:@"%@ €", book[@"price"]];
 }
 
 @end

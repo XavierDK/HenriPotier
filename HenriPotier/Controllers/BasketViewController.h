@@ -18,19 +18,4 @@
  */
 @property (nonatomic, strong) NSArray *booksSelected;
 
-/**
- *  The offers available
- */
-@property (nonatomic, strong) NSDictionary *offers;
-
-/**
- *  The basic price of the books
- */
-@property (nonatomic, assign) CGFloat basicPrice;
-
-/**
- *  The best price after offer application
- */
-@property (nonatomic, assign) CGFloat bestPrice;
-
 @end

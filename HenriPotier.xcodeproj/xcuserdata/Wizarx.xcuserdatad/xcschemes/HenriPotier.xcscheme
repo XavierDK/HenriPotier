@@ -51,6 +51,11 @@
                BlueprintName = "HenriPotierTests"
                ReferencedContainer = "container:HenriPotier.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "MathSpec">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

@@ -10,7 +10,9 @@ pod "MagicalRecord"
 
 end
 
-target 'HenriPotierTests' do
+target 'HenriPotierTests', :exclusive => true do
+
+pod 'Kiwi'
 
 end
 

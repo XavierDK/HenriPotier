@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-
 @class Book;
 
 /**
@@ -38,6 +37,7 @@
 @property (nonatomic, retain) NSDate *date;
 
 @end
+
 
 @interface Basket (CoreDataGeneratedAccessors)
 

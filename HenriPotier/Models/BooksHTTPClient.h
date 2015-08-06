@@ -8,6 +8,7 @@
 
 #import <AFNetworking/AFHTTPSessionManager.h>
 
+static NSString * const BooksURLString = @"http://henri-potier.xebia.fr/books";
 
 @protocol BooksHTTPClientDelegate;
 
@@ -21,13 +22,6 @@
  */
 @property (nonatomic, weak) id<BooksHTTPClientDelegate>delegate;
 
-
-/**
- *  Method the singleton of the Client
- *
- *  @return The singleton of the class
- */
-+ (BooksHTTPClient*)sharedBooksHTTPClient;
 
 /**
  *  Constructor of the class
@@ -49,35 +43,6 @@
  *  @param isbns An array of the unique identifier of the books
  */
 - (void)updateOffersForIsbns:(NSArray*)isbns;
-
-/**
- *  Method to get the total price for some books
- *
- *  @param books The books for the price addition
- *
- *  @return The total price
- */
-- (CGFloat)totalPriceForBooks:(NSArray*)books;
-
-/**
- *  Method to get the best price in different offers with a basic price
- *
- *  @param offersDic  The dictionary containing the offers available
- *  @param basicPrice The basic price of the addition of books
- *
- *  @return The best price found
- */
-- (CGFloat)bestPriceForOffers:(NSDictionary*)offersDic andBasicPrice:(CGFloat)basicPrice;
-
-/**
- *  <#Description#>
- *
- *  @param offersDic  <#offersDic description#>
- *  @param basicPrice <#basicPrice description#>
- *
- *  @return <#return value description#>
- */
-- (NSArray*)pricesForOffers:(NSDictionary*)offersDic andBasicPrice:(CGFloat)basicPrice;
 
 @end
 
